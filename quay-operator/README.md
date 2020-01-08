@@ -3,11 +3,11 @@
 [Quay Operator](https://github.com/redhat-cop/quay-operator)
 
 ```
-oc new-project quay-enterprise
+$ oc new-project quay-enterprise
 ```
 
 ```
-oc apply --kustomize overlays/development
+$ oc apply --kustomize overlays/development
 ```
 
 ## Configuration
