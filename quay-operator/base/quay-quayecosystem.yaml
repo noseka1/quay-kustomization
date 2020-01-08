@@ -1,0 +1,24 @@
+apiVersion: redhatcop.redhat.io/v1alpha1
+kind: QuayEcosystem
+metadata:
+  name: quay
+spec:
+  quay:
+    imagePullSecretName: redhat-quay-pull-secret
+    superuserCredentialsSecretName: superuser
+    # change this to your own domain
+    routeHost: quay-quay-enterprise.mycluster.example.com
+    configSecretName: quayconfig
+    # change this to your own domain
+    configRouteHost: quay-config-quay-enterprise.mycluster.example.com
+    keepConfigDeployment: true
+    database:
+      volumeSize: 1Gi
+      credentialsSecretName: database
+    registryStorage:
+      persistentVolumeAccessModes:
+        - ReadWriteOnce
+      persistentVolumeSize: 500Gi
+  clair:
+    enabled: true
+    imagePullSecretName: redhat-quay-pull-secret

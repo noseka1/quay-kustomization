@@ -1,0 +1,13 @@
+nameReference:
+- kind: Secret
+  fieldSpecs:
+  - path: spec/quay/imagePullSecretName
+    kind: QuayEcosystem
+  - path: spec/quay/configSecretName
+    kind: QuayEcosystem
+  - path: spec/quay/database/credentialsSecretName
+    kind: QuayEcosystem
+  - path: spec/quay/superuserCredentialsSecretName
+    kind: QuayEcosystem
+  - path: spec/clair/imagePullSecretName
+    kind: QuayEcosystem

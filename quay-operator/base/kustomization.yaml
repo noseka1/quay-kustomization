@@ -1,0 +1,44 @@
+commonLabels:
+  app: quay
+
+commonAnnotations:
+  description: Red Hat Quay
+
+configurations:
+- kustomizeconfig/operatorgroup.yaml
+- kustomizeconfig/quayecosystem.yaml
+
+namespace: quay-enterprise
+
+resources:
+- quay-enterprise-namespace.yaml
+- quay-operatorgroup.yaml
+- quay-quayecosystem.yaml
+- quay-subscription.yaml
+
+secretGenerator:
+- name: database
+  literals:
+  - database-username=quay
+  - database-password=password
+  - database-root-password=password
+  - database-name=quay
+- name: quayconfig
+  literals:
+  - config-app-password=password
+- name: superuser
+  literals:
+  - superuser-email=quay@redhat.com
+  - superuser-password=password
+  - superuser-username=quay
+- name: redhat-quay-pull-secret
+  files:
+  - .dockerconfigjson=redhat-quay-pull-secret.json
+  type: kubernetes.io/dockerconfigjson
+
+vars:
+- name: NAMESPACE
+  objref:
+    kind: Namespace
+    name: quay-enterprise
+    apiVersion: v1
