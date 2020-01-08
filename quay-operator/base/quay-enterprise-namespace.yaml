@@ -1,5 +1,0 @@
-apiVersion: v1
-kind: Namespace
-metadata:
-  # change this if deploying to a different namespace
-  name: quay-enterprise
