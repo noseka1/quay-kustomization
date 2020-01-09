@@ -1,6 +1,6 @@
 # Quay Operator
 
-The full documenation of the Quay operator can be found [here](https://github.com/redhat-cop/quay-operator).
+The full documenation for the Quay operator can be found [here](https://github.com/redhat-cop/quay-operator).
 
 ## Configuration
 
@@ -14,7 +14,7 @@ Note that the `production` overlay places Quay pods on nodes labeled with `node-
 
 #### Local Storage (Non-Prod Use Only)
 
-By default Quay uses a Local storage which means that it stores container images into a directory `/datastorage/registry` on the local file system. If you mount a PVC into this directory, you will obtain a persistent local storage and images uploaded to the registry will survive a restart of the Quay pod. Note that Local storage is not meant to be used for production deployments.
+By default Quay uses a Local storage which means that it stores container images into a directory `/datastorage/registry` on the local file system. If you mount a PVC into this directory, you will obtain a persistent local storage and images uploaded to the registry will survive a restart of the Quay pod. Note that *Local storage is not meant to be used for production deployments*.
 
 #### Production Storage Backends
 
