@@ -13,10 +13,8 @@ spec:
           memory: 1Gi
       nodeSelector:
         node-role.kubernetes.io/infra: ''
-    registryStorage:
-      persistentVolumeAccessModes:
-        - ReadWriteMany
-      persistentVolumeSize: 500Gi
+    registryBackends:
+      # configure your storage backend here
     resources:
       requests:
         cpu: 256m
