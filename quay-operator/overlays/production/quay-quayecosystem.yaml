@@ -6,7 +6,30 @@ spec:
   quay:
     database:
       volumeSize: 1Gi
+      resources:
+        requests:
+          cpu: 256m
+          memory: 1Gi
     registryStorage:
       persistentVolumeAccessModes:
         - ReadWriteMany
       persistentVolumeSize: 500Gi
+    resources:
+      requests:
+        cpu: 256m
+        memory: 512Mi
+  redis:
+    resources:
+      requests:
+        cpu: 256m
+        memory: 512Mi
+  clair:
+    database:
+      resources:
+        requests:
+          cpu: 256m
+          memory: 1Gi
+    resources:
+      requests:
+        cpu: 256m
+        memory: 512Mi
