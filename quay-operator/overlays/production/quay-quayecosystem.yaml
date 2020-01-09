@@ -4,6 +4,7 @@ metadata:
   name: quay
 spec:
   quay:
+    replicas: 3
     database:
       volumeSize: 1Gi
       resources:
@@ -23,6 +24,7 @@ spec:
     nodeSelector:
       node-role.kubernetes.io/infra: ''
   redis:
+    replicas: 3
     resources:
       requests:
         cpu: 256m
