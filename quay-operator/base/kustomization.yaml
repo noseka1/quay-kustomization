@@ -1,9 +1,6 @@
 commonLabels:
   app: quay
 
-commonAnnotations:
-  description: Red Hat Quay
-
 configurations:
 - kustomizeconfig/operatorgroup.yaml
 - kustomizeconfig/quayecosystem.yaml
