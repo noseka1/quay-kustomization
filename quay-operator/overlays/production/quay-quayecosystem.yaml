@@ -10,6 +10,8 @@ spec:
         requests:
           cpu: 256m
           memory: 1Gi
+      nodeSelector:
+        node-role.kubernetes.io/infra: ''
     registryStorage:
       persistentVolumeAccessModes:
         - ReadWriteMany
@@ -18,18 +20,26 @@ spec:
       requests:
         cpu: 256m
         memory: 512Mi
+    nodeSelector:
+      node-role.kubernetes.io/infra: ''
   redis:
     resources:
       requests:
         cpu: 256m
         memory: 512Mi
+    nodeSelector:
+      node-role.kubernetes.io/infra: ''
   clair:
     database:
       resources:
         requests:
           cpu: 256m
           memory: 1Gi
+      nodeSelector:
+        node-role.kubernetes.io/infra: ''
     resources:
       requests:
         cpu: 256m
         memory: 512Mi
+    nodeSelector:
+      node-role.kubernetes.io/infra: ''
