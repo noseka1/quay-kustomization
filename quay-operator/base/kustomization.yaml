@@ -26,6 +26,9 @@ secretGenerator:
   literals:
   # username is quayconfig
   - config-app-password=password
+- name: redis
+  literals:
+  - password=password
 - name: superuser
   literals:
   - superuser-email=quay@redhat.com

@@ -14,6 +14,9 @@ spec:
     keepConfigDeployment: true
     database:
       credentialsSecretName: database
+  redis:
+    credentialsSecretName: redis
+    imagePullSecretName: redhat-quay-pull-secret
   clair:
     enabled: true
     imagePullSecretName: redhat-quay-pull-secret

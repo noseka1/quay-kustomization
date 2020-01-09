@@ -9,5 +9,9 @@ nameReference:
     kind: QuayEcosystem
   - path: spec/quay/superuserCredentialsSecretName
     kind: QuayEcosystem
+  - path: spec/redis/credentialsSecretName
+    kind: QuayEcosystem
+  - path: spec/redis/imagePullSecretName
+    kind: QuayEcosystem
   - path: spec/clair/imagePullSecretName
     kind: QuayEcosystem
