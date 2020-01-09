@@ -20,3 +20,4 @@ spec:
   clair:
     enabled: true
     imagePullSecretName: redhat-quay-pull-secret
+    updateInterval: "60m"
