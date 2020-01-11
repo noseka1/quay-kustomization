@@ -1,2 +1,4 @@
+namespace: openshift-operators
+
 resources:
 - container-security-operator-subscription.yaml
