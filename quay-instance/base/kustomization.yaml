@@ -1,0 +1,34 @@
+commonLabels:
+  app: quay
+
+configurations:
+- kustomizeconfig/quayecosystem.yaml
+
+namespace: quay-enterprise
+
+resources:
+- quay-quayecosystem.yaml
+
+secretGenerator:
+- name: database
+  literals:
+  - database-username=quay
+  - database-password=password
+  - database-root-password=password
+  - database-name=quay
+- name: quayconfig
+  literals:
+  # username is quayconfig
+  - config-app-password=password
+- name: redis
+  literals:
+  - password=password
+- name: superuser
+  literals:
+  - superuser-email=quay@redhat.com
+  - superuser-password=password
+  - superuser-username=quay
+- name: redhat-quay-pull-secret
+  files:
+  - .dockerconfigjson=redhat-quay-pull-secret.json
+  type: kubernetes.io/dockerconfigjson
