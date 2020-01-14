@@ -2,7 +2,7 @@
 
 This repository contains kustomizations for installing Red Hat Quay on OpenShift. There are three separate kustomizations available each implementing a part of the Quay deployment:
 
-* [container-security-operator](container-security-operator) Installs Container Security Operator which injects the information on detected vulnerabilities to Kubernetes/OpenShift.
+* [container-security-operator](container-security-operator) Installs Container Security Operator. This operator injects information on detected vulnerabilities to Kubernetes/OpenShift. Installation of this operator is *optional*.
 * [quay-operator](quay-operator) Installs an operator for deploying and managing Quay instances.
 * [quay-instance](quay-instance) Uses the Quay operator to deploy an instance of Red Hat Quay.
 
