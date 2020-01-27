@@ -8,7 +8,7 @@ This kustomization uses [Quay operator](https://github.com/redhat-cop/quay-opera
 
 * Edit [base/kustomization.yaml](base/kustomization.yaml) to set the credentails (username and password) for various Quay components. Note that for simplicity credentials are stored in the configuration file in plain text. Instead of storing unprotected credentials in git I strongly recommend that you consider using a [secretGeneratorPlugin](https://github.com/kubernetes-sigs/kustomize/blob/master/examples/secretGeneratorPlugin.md) to store your credentials externally.
 
-* Edit [base/redhat-quay-pull-secret.json](base/redhat-quay-pull-secret.json) and replace the contant of this file with your Red Hat Quay pull secret. This secret allows one to pull images from `quay.io/redhat`. You can obtain the Red Hat Quay secret by following the instructions at [Accessing Red Hat Quay (formerly Quay Enterprise) without a CoreOS login](https://access.redhat.com/solutions/3533201), section *JSON config.json for Red Hat Quay v3*.
+* Open [base/redhat-quay-pull-secret.json](base/redhat-quay-pull-secret.json) and replace the content of this file with your Red Hat Quay pull secret. This secret allows one to pull images from `quay.io/redhat`. You can obtain the Red Hat Quay secret by following the instructions at [Accessing Red Hat Quay (formerly Quay Enterprise) without a CoreOS login](https://access.redhat.com/solutions/3533201), section *JSON config.json for Red Hat Quay v3*.
 
 There are two kustomization variants available to you: [development](overlays/development) and [production](overlays/production). These variants differ mostly in the size of the deployed resources and the backend storage used.
 
