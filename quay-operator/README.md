@@ -10,7 +10,7 @@ $ kustomize edit set namespace <namespace>
 $ cd ..
 ```
 
-To apply the kustomization run:
+To apply the kustomization run this command as a user with a *cluster-admin* role:
 
 ```
 $ oc apply --kustomize base
