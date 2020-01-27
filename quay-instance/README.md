@@ -26,8 +26,14 @@ Note that the production variant places Quay pods on nodes labeled with `node-ro
 
 ## Deployment
 
-To deploy Red Hat Quay, run this command:
+To deploy Red Hat Quay for development purposes, run this command:
 
 ```
 $ oc apply --kustomize overlays/development
+```
+
+To deploy Red Hat Quay to production, run this command:
+
+```
+$ oc apply --kustomize overlays/production
 ```
