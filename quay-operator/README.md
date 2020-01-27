@@ -13,5 +13,5 @@ $ popd
 To apply the kustomization run:
 
 ```
-oc kustomize base | oc apply --filename -
+$ oc apply --kustomize base
 ```
