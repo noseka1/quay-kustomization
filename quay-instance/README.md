@@ -16,17 +16,17 @@ There are two kustomization variants available to you: [development](overlays/de
 
 Development variant uses a Local storage backed by a PVC. This means that Quay will store container images into a directory `/datastorage/registry` on the local file system. Kustomization mounts a PVC into this directory to obtain a persistent local storage. Images uploaded to the registry will survive a restart of the Quay pod. Note that *Local storage is not meant to be used for production deployments*.
 
+Development variant deploys a single Quay pod to preserve resources.
+
 ### Production Variant
 
-For production deployments, you should configure Quay to use one of the production-grade storage backends like S3, Blob storage (Azure, GCP), RADOS, Swift, ... See [Registry Storage](https://github.com/redhat-cop/quay-operator/blob/master/docs/storage.md) for details on the available storage backend types.
+For production deployments, Quay must be configured to use one of the production-grade storage backends like S3, Blob storage (Azure, GCP), RADOS, Swift, ... See [Registry Storage](https://github.com/redhat-cop/quay-operator/blob/master/docs/storage.md) for details on the available storage backend types. Edit [overlays/production/quay-quayecosystem.yml](overlays/production/quay-quayecosystem.yml) to add your storage backend configuration.
 
-Note that the `production` overlay places Quay pods on nodes labeled with `node-role.kubernetes.io/infra: ''`. Make sure that in your OpenShift cluster you have nodes having this label attached. Alternatively, you can change or remove this label from the [overlays/production/quay-quayecosystem.yaml](overlays/production/quay-quayecosystem.yaml) descriptor.
+Note that the `production` variant places Quay pods on nodes labeled with `node-role.kubernetes.io/infra: ''`. Make sure that in your OpenShift cluster you have nodes having this label attached. Alternatively, you can change or remove this label from the [overlays/production/quay-quayecosystem.yaml](overlays/production/quay-quayecosystem.yaml) descriptor.
 
 ## Deployment
 
-```
-$ oc new-project quay-enterprise
-```
+To deploy Red Hat Quay, run this command:
 
 ```
 $ oc apply --kustomize overlays/development
