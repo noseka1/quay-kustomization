@@ -4,5 +4,5 @@ kind: Kustomization
 patchesStrategicMerge:
 - quay-quayecosystem.yaml
 
-resources:
+bases:
 - ../../base
