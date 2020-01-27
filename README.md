@@ -8,26 +8,27 @@ This repository contains kustomizations for installing Red Hat Quay on OpenShift
 
 # Quick Start
 
-The following commands require *cluster-admin* role.
+Note that some of the following commands require *cluster-admin* role.
 
-Install Container Security Operator:
-
-```
-$ oc apply --kustomize container-security-operator/base
-```
-
-Create a new project called *quay-enterprise*:
+Create a new project called `quay-enterprise`:
 
 ```
 $ oc new-project quay-enterprise
 ```
 
-Install Quay operator and deploy a Quay instance in the *quay-enterprise* project:
+Install Quay operator into the `quay-enterprise` project:
 
 ```
 $ oc apply --kustomize quay-operator/base
 ```
-
+Deploy a Red Hat Quay instance into the `quay-enterprise` project:
+ 
 ```
 $ oc apply --kustomize quay-instance/overlays/development
+```
+
+Optionally, install Container Security Operator:
+
+```
+$ oc apply --kustomize container-security-operator/base
 ```
