@@ -5,9 +5,9 @@ This kustomization creates a subscription to the latest version of [Quay operato
 Kustomization deploys to the target namespace called `quay-enterprise`. It assumes that this namespace already exists. You can change the target namespace with:
 
 ```
-$ pushd base
+$ cd base/
 $ kustomize edit set namespace <namespace>
-$ popd
+$ cd ..
 ```
 
 To apply the kustomization run:
