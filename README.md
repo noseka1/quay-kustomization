@@ -21,6 +21,9 @@ Install Quay operator into the `quay-enterprise` project:
 ```
 $ oc apply --kustomize quay-operator/base
 ```
+
+Refer to [Accessing Red Hat Red Hat Quay](https://access.redhat.com/solutions/3533201) to get the credentials to pull containers from the Quay.io registry. Save the credentials as `quay-instance/base/redhat-quay-pull-secret.json`.
+
 Deploy a Red Hat Quay instance into the `quay-enterprise` project:
  
 ```
