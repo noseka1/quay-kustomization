@@ -16,7 +16,7 @@ Create a new project called `quay-enterprise`:
 $ oc new-project quay-enterprise
 ```
 
-Install Quay operator into the `quay-enterprise` project:
+Install Quay operator to the `quay-enterprise` project:
 
 ```
 $ oc apply --kustomize quay-operator/base
@@ -24,14 +24,16 @@ $ oc apply --kustomize quay-operator/base
 
 Refer to [Accessing Red Hat Red Hat Quay](https://access.redhat.com/solutions/3533201) to get the credentials to pull containers from the Quay.io registry. Save the credentials as `quay-instance/base/redhat-quay-pull-secret.json`.
 
-Deploy a Red Hat Quay instance into the `quay-enterprise` project:
+Deploy a Red Hat Quay instance to the `quay-enterprise` project:
  
 ```
 $ oc apply --kustomize quay-instance/overlays/development
 ```
+In several minutes a development Quay installation should be up and running on your OpenShift cluster.
 
 Optionally, install Container Security Operator:
 
 ```
 $ oc apply --kustomize container-security-operator/base
 ```
+
