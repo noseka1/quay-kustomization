@@ -12,9 +12,9 @@ This kustomization uses [Quay operator](https://github.com/redhat-cop/quay-opera
 
 There are two kustomization variants available to you: [development](overlays/development) and [production](overlays/production). These variants differ mostly in the size of the deployed resources and the backend storage used.
 
-### Development Variant (Non-Prod Use Only)
+### Development Variant
 
-Development variant uses a Local storage. This means that Quay will store container images into a directory `/datastorage/registry` on the local file system. Kustomization mounts a PVC into this directory to obtain a persistent local storage. Images uploaded to the registry will survive a restart of the Quay pod. Note that *Local storage is not meant to be used for production deployments*.
+Development variant uses a Local storage. This means that Quay will store container images into a directory `/datastorage/registry` on the local file system. The kustomization mounts a PVC into this directory to obtain a persistent local storage. Images uploaded to the registry will survive a restart of the Quay pod. Note that *Local storage is not meant to be used for production deployments*.
 
 Development variant deploys a single Quay pod to preserve resources.
 
