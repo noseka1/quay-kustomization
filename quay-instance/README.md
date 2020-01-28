@@ -14,7 +14,7 @@ There are two kustomization variants available to you: [development](overlays/de
 
 ### Development Variant
 
-Development variant uses a Local storage. This means that Quay will store container images into a directory `/datastorage/registry` on the local file system. The kustomization mounts a PVC into this directory to obtain a persistent local storage. Images uploaded to the registry will survive a restart of the Quay pod. Note that *Local storage is not meant to be used for production deployments*.
+Development variant uses a local storage. This means that Quay will store container images into a directory `/datastorage/registry` on the local file system. The kustomization mounts a PVC into this directory to achieve a persistent local storage. Images uploaded to the registry will survive a restart of the Quay pod. Note that *local storage is not meant to be used for production deployments*.
 
 Development variant deploys a single Quay pod to preserve resources.
 
