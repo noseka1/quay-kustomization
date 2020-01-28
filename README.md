@@ -53,7 +53,7 @@ spec:
   project: default
   source:
     path: quay-operator/base
-    repoURL: https://noseka1:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@github.com/noseka1/quay-kustomization-priv.git
+    repoURL: https://noseka1:xxxxx@github.com/noseka1/quay-kustomization-priv.git
     targetRevision: HEAD
   syncPolicy:
     automated: {}
@@ -71,7 +71,7 @@ spec:
   project: default
   source:
     path: quay-instance/overlays/development
-    repoURL: https://noseka1:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@github.com/noseka1/quay-kustomization-priv.git
+    repoURL: https://noseka1:xxxxx@github.com/noseka1/quay-kustomization-priv.git
     targetRevision: HEAD
   syncPolicy:
     automated: {}
@@ -89,7 +89,7 @@ spec:
   project: default
   source:
     path: container-security-operator/base
-    repoURL: https://noseka1:xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx@github.com/noseka1/quay-kustomization-priv.git
+    repoURL: https://noseka1:xxxxx@github.com/noseka1/quay-kustomization-priv.git
     targetRevision: HEAD
   syncPolicy:
     automated: {}
