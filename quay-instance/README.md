@@ -20,7 +20,7 @@ Development variant deploys a single Quay pod to preserve resources.
 
 ### Production Variant
 
-For production deployments, Quay must be configured to use one of the production-grade storage backends like S3, Blob storage (Azure, GCP), RADOS, Swift, ... See [Registry Storage](https://github.com/redhat-cop/quay-operator/blob/master/docs/storage.md) for details on the available storage backend types and their configuration. Edit [overlays/production/quay-quayecosystem.yaml](overlays/production/quay-quayecosystem.yaml) and add your storage backend configuration.
+For production deployments, Quay must be configured to use one of the production-grade storage backends like S3, Blob storage (Azure, GCP), RADOS, Swift, ... See [Registry Storage](https://github.com/redhat-cop/quay-operator/blob/master/docs/storage.md) for details on the available storage backend types and their configuration. You must edit [overlays/production/quay-quayecosystem.yaml](overlays/production/quay-quayecosystem.yaml) to add your storage backend configuration there.
 
 Note that the production variant places Quay pods on nodes labeled with `node-role.kubernetes.io/infra: ''`. Make sure that in your OpenShift cluster you have nodes having this label attached. Alternatively, you can change or remove this label from the [overlays/production/quay-quayecosystem.yaml](overlays/production/quay-quayecosystem.yaml) descriptor.
 
