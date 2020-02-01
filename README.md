@@ -42,10 +42,9 @@ $ oc apply --kustomize container-security-operator/base
 The provided kustomization can used as a base for a GitOps deployment of Red Hat Quay on OpenShift. Here are sample Argo CD application files. Remember to replace the `repoURL` with your own git repository URL:
 
 ```yaml
-# quay-operator-argocd.yaml
+# quay-operator-application.yaml
 metadata:
   name: quay-operator
-  namespace: argocd
 spec:
   destination:
     namespace: quay-enterprise
@@ -60,10 +59,9 @@ spec:
 ```
 
 ```yaml
-# quay-instance-argocd.yaml
+# quay-instance-application.yaml
 metadata:
   name: quay-instance
-  namespace: argocd
 spec:
   destination:
     namespace: quay-enterprise
@@ -78,10 +76,9 @@ spec:
 ```
 
 ```yaml
-# container-security-operator-argocd.yaml
+# container-security-operator-application.yaml
 metadata:
   name: container-security-operator
-  namespace: argocd
 spec:
   destination:
     namespace: openshift-operators
@@ -98,9 +95,10 @@ spec:
 After your saved the above files to your local directory, you can start the GitOps deployment by issuing the following commands:
 
 ```
-$ argocd app create --file quay-operator-argocd.yaml
-$ argocd app create --file quay-instance-argocd.yaml
-$ argocd app create --file container-security-operator-argocd.yaml
+$ oc new-project quay-enterprise
+$ argocd app create --file quay-operator-application.yaml
+$ argocd app create --file quay-instance-application.yaml
+$ argocd app create --file container-security-operator-application.yaml
 ```
 Here are some screenshots showing Red Hat Quay deployed using Argo CD:
 
