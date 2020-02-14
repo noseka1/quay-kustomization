@@ -12,7 +12,13 @@ spec:
           cpu: 256m
           memory: 1Gi
     registryBackends:
-      # configure your storage backend here
+    - name: rhocs
+      rhocs:
+        hostname: noobaa-mgmt-openshift-storage.apps.mycluster.example.com
+        secure: true
+        accessKey: 9dnfLKCsrGBgsS2baGnQ
+        secretKey: f6d1VYhC/uSr7K2Rf6cCKHWG9MIL0V4hyqU9OKlm
+        bucketName: quay-enterprise-978a5388-649b-4b50-b038-85458de01106
     resources:
       requests:
         cpu: 256m
