@@ -11,35 +11,25 @@ spec:
         requests:
           cpu: 256m
           memory: 1Gi
-      nodeSelector:
-        node-role.kubernetes.io/infra: ''
     registryBackends:
       # configure your storage backend here
     resources:
       requests:
         cpu: 256m
         memory: 512Mi
-    nodeSelector:
-      node-role.kubernetes.io/infra: ''
   redis:
     replicas: 3
     resources:
       requests:
         cpu: 256m
         memory: 512Mi
-    nodeSelector:
-      node-role.kubernetes.io/infra: ''
   clair:
     database:
       resources:
         requests:
           cpu: 256m
           memory: 1Gi
-      nodeSelector:
-        node-role.kubernetes.io/infra: ''
     resources:
       requests:
         cpu: 256m
         memory: 512Mi
-    nodeSelector:
-      node-role.kubernetes.io/infra: ''
