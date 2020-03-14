@@ -2,7 +2,7 @@
 
 This kustomization creates a subscription to the latest version of [quay-operator](https://github.com/redhat-cop/quay-operator) and deploys an instance of this operator on OpenShift.
 
-Kustomization deploys to the target namespace called `quay-enterprise`. It assumes that this namespace already exists. You can change the target namespace with:
+Kustomization deploys to the target namespace called `quay-enterprise`. You can change the target namespace with:
 
 ```
 $ cd base/
