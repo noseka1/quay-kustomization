@@ -10,12 +10,6 @@ This repository contains kustomizations for installing Red Hat Quay on OpenShift
 
 Note that some of the following commands require *cluster-admin* role.
 
-Create a new project called `quay-enterprise`:
-
-```
-$ oc new-project quay-enterprise
-```
-
 Install Quay operator to the `quay-enterprise` project:
 
 ```
