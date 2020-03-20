@@ -1,6 +1,6 @@
 # Kustomization for Installing Red Hat Quay on OpenShift
 
-This repository contains kustomizations for installing Red Hat Quay on OpenShift. There are three separate kustomizations available each implementing a part of the Quay deployment:
+This kustomization uses [quay-operator](https://github.com/redhat-cop/quay-operator) to deploy Red Hat Quay on OpenShift. There are three separate kustomizations available each implementing a part of the Quay deployment:
 
 1. [quay-operator](quay-operator) Installs an operator for deploying and managing Quay instances.
 2. [quay-instance](quay-instance) Uses the Quay operator installed in the previous step to deploy an instance of Red Hat Quay. Must be deployed to the same OpenShift project as the quay-operator.
