@@ -9,7 +9,7 @@ namespace: quay-enterprise
 resources:
 - quay-enterprise-namespace.yaml
 - quay-operatorgroup.yaml
-- quay-subscription.yaml
+- quay-operator-subscription.yaml
 
 vars:
 - fieldref:
@@ -18,4 +18,4 @@ vars:
   objref:
     apiVersion: operators.coreos.com/v1alpha1
     kind: Subscription
-    name: quay
+    name: quay-operator
