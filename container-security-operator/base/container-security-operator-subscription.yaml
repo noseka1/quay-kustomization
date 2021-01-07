@@ -3,8 +3,7 @@ kind: Subscription
 metadata:
   name: container-security-operator
 spec:
-  channel: alpha
   installPlanApproval: Automatic
   name: container-security-operator
-  source: community-operators
+  source: redhat-operators
   sourceNamespace: openshift-marketplace
