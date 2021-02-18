@@ -5,6 +5,7 @@ This kustomization uses [quay-operator](https://github.com/redhat-cop/quay-opera
 1. [quay-operator](quay-operator) Installs an operator for deploying and managing Quay instances.
 2. [quay-instance](quay-instance) Uses the Quay operator installed in the previous step to deploy an instance of Red Hat Quay. Must be deployed to the same OpenShift project as the quay-operator.
 3. [container-security-operator](container-security-operator) Installs Container Security Operator. This operator injects information on detected vulnerabilities to Kubernetes/OpenShift. Installation of this operator is *optional*. There's one instance of this operator installed per OpenShift cluster.
+4. [quay-bridge-operator](quay-bridge-operator) Installs Quay Bridge Operator. This operator is responsible for facilitating the utilization of Red Hat Quay as the default image registry for an OpenShift Container Platform environment. Installation of this operator is *optional*. There's one instance of this operator installed per OpenShift cluster.
 
 ## Quick Start
 
@@ -29,4 +30,10 @@ Optionally, install Container Security Operator:
 
 ```
 $ oc apply --kustomize container-security-operator/base
+```
+
+Optionally, install Quay Bridge Operator:
+
+```
+$ oc apply --kustomize quay-bridge-operator/base
 ```
