@@ -1,21 +1,7 @@
 apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 
-configurations:
-- kustomizeconfig/operatorgroup.yaml
-
-namespace: quay-enterprise
+namespace: openshift-operators
 
 resources:
-- quay-enterprise-ns.yaml
-- quay-og.yaml
 - quay-operator-sub.yaml
-
-vars:
-- fieldref:
-    fieldPath: metadata.namespace
-  name: NAMESPACE
-  objref:
-    apiVersion: operators.coreos.com/v1alpha1
-    kind: Subscription
-    name: quay-operator
