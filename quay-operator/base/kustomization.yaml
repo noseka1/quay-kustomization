@@ -7,9 +7,9 @@ configurations:
 namespace: quay-enterprise
 
 resources:
-- quay-enterprise-namespace.yaml
-- quay-operatorgroup.yaml
-- quay-operator-subscription.yaml
+- quay-enterprise-ns.yaml
+- quay-og.yaml
+- quay-operator-sub.yaml
 
 vars:
 - fieldref:
