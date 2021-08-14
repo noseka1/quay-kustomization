@@ -4,4 +4,4 @@ kind: Kustomization
 namespace: openshift-operators
 
 resources:
-- container-security-operator-subscription.yaml
+- container-security-operator-sub.yaml
