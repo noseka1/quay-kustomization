@@ -1,4 +1,4 @@
-# Quay Instance
+# OBSOLETE: Quay Instance
 
 This kustomization uses [quay-operator](https://github.com/redhat-cop/quay-operator) to install an instance of Red Hat Quay on OpenShift. Before deploying Quay, checkout out the configuration steps in the next section.
 
