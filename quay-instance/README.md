@@ -6,7 +6,7 @@ This kustomization uses [quay-operator](https://github.com/redhat-cop/quay-opera
 
 Common configuration:
 
-* This kustomization deploys Quay to the target namespace called `quay-enterprise`. It assumes that this namespace already exists. You can change the target namespace in [base/kustomization.yaml](base/kustomization.yaml). Note that the quay-instance must be deployed to the same namespace as the quay-operator.
+* This kustomization deploys Quay to the target namespace called `quay-enterprise`.
 
 * Edit [base/kustomization.yaml](base/kustomization.yaml) to set the credentails (username and password) for various Quay components. Note that for simplicity credentials are stored in the configuration file as plaintext. Instead of storing unprotected credentials in git it is strongly recommended that you consider using a [secretGeneratorPlugin](https://github.com/kubernetes-sigs/kustomize/blob/master/examples/secretGeneratorPlugin.md) to store your credentials externally.
 
