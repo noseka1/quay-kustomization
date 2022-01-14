@@ -3,7 +3,7 @@ kind: Subscription
 metadata:
   name: container-security-operator
 spec:
-  channel: quay-v3.5
+  channel: quay-v3.6
   installPlanApproval: Automatic
   name: container-security-operator
   source: redhat-operators
