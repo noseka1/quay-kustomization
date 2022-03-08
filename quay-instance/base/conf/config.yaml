@@ -1,3 +1,5 @@
+# List of available configuration options can be found at:
+# https://github.com/quay/quay/blob/master/util/config/schema.py
 SUPER_USERS:
 - admin
 AUTHENTICATION_TYPE: Database
@@ -9,3 +11,10 @@ DISTRIBUTED_STORAGE_DEFAULT_LOCATIONS: []
 DISTRIBUTED_STORAGE_PREFERENCE:
 - default
 FEATURE_DIRECT_LOGIN: true
+# Create organization and repo automatically
+CREATE_NAMESPACE_ON_PUSH: true
+CREATE_ORGANIZATION_ON_PUSH: true
+# Allow creating the first user via API call, see also:
+# As an admin, I want an API to create first user, so I can automate deployment
+# https://issues.redhat.com/browse/PROJQUAY-1926
+FEATURE_USER_INITIALIZE: true
