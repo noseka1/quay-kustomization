@@ -3,7 +3,7 @@ kind: Subscription
 metadata:
   name: quay-operator
 spec:
-  channel: stable-3.6
+  channel: stable-3.7
   installPlanApproval: Automatic
   name: quay-operator
   source: redhat-operators
