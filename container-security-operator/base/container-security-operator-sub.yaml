@@ -3,7 +3,7 @@ kind: Subscription
 metadata:
   name: container-security-operator
 spec:
-  channel: stable-3.7
+  channel: stable-3.8
   installPlanApproval: Automatic
   name: container-security-operator
   source: redhat-operators
